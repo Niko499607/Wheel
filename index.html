@@ -563,7 +563,7 @@ body.rm #hPlanet,body.rm .hglow,body.rm .hcrown,body.rm .hstars i,body.rm .hemb 
       <div class="fld"><label for="wsk">Look</label><select id="wsk"></select></div>
       <div class="fld"><label for="wor">Slice order around the wheel</label><select id="wor"><option value="">Clockwise (first entry at the right, going down)</option><option value="ccw">Counter-clockwise (so the next entry arrives as the wheel spins)</option></select></div>
       <div class="fld"><label for="wnl">Names on the slices</label><select id="wnl"><option value="">Show names (tiny slices hide them automatically)</option><option value="1">Hide names, show only the result after the spin</option></select></div>
-      <div class="fld"><label for="wwg">Result effect</label><select id="wwg"><option value="">None</option><option value="angel">Angel wings and halo</option><option value="demon">Demon wings and horns</option><option value="archangel">Archangel wings</option><option value="fallen">Fallen angel</option><option value="hulk">Hulk smash (green shockwave)</option><option value="flash">Lightning speed</option><option value="web">Spider webs</option><option value="atom">Atomic orbits</option><option value="fist">Blood aura</option><option value="cosmic">Cosmic gems</option><option value="target">Bullseye</option><option value="infstr">∞ Strength: a hand grabs and slams the wheel</option><option value="infspd">∞ Speed: the wheel rolls off and returns</option><option value="infagi">∞ Agility: leaps over obstacles</option><option value="infdur">∞ Durability: nothing can break it</option><option value="infiq">∞ IQ: holographic mind</option><option value="infcom">∞ Combat: flurry and finishing blow</option><option value="infsor">∞ Sorcery: runes ignite</option><option value="infpow">∞ Power mastery: energy mandala</option></select></div>
+      <div class="fld"><label for="wwg">Result effect</label><select id="wwg"><option value="">None</option><option value="angel">Angel wings and halo</option><option value="demon">Demon wings and horns</option><option value="archangel">Archangel wings</option><option value="fallen">Fallen angel</option><option value="cosmic">Cosmic gems</option><option value="target">Bullseye</option><option value="infstr">∞ Strength: a hand grabs and slams the wheel</option><option value="infspd">∞ Speed: the wheel rolls off and returns</option><option value="infagi">∞ Agility: leaps over obstacles</option><option value="infdur">∞ Durability: nothing can break it</option><option value="infiq">∞ IQ: holographic mind</option><option value="infcom">∞ Combat: flurry and finishing blow</option><option value="infsor">∞ Sorcery: runes ignite</option><option value="infpow">∞ Power mastery: energy mandala</option></select></div>
       <p class="dim" style="margin:-2px 0 8px">The effect appears when a result lands. It is skipped for entries named Nothing, No sin or None, or tagged "plain". Tag an entry with an effect name (angel, demon, archangel, fallen, hulk, flash, web, atom, fist, cosmic, target) to force that effect on one slice.</p>
       <div class="fld"><span></span><button class="btn sm" id="fxPrev">Preview effects</button></div>
       <div class="fld"><label for="wrim">Rim accent</label><div class="foot" style="margin:0"><button class="sw" id="wrim" aria-label="Rim accent color"></button><button class="btn sm" id="wrimR">Use the look's own</button></div></div>
@@ -1476,7 +1476,7 @@ function demonWing(){
 }
 const HALO='<svg viewBox="0 0 100 30" width="100%" height="100%" aria-hidden="true"><defs><linearGradient id="hlA" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b98a2c"/><stop offset=".5" stop-color="#fff4c4"/><stop offset="1" stop-color="#b98a2c"/></linearGradient></defs><ellipse cx="50" cy="15" rx="44" ry="9" fill="none" stroke="url(#hlA)" stroke-width="4.2"/><ellipse cx="50" cy="14" rx="44" ry="9" fill="none" stroke="#fffbe6" stroke-opacity=".7" stroke-width="1"/></svg>';
 const HORN='<svg viewBox="0 0 40 80" width="100%" height="100%" aria-hidden="true"><defs><linearGradient id="hnD" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#1c0508"/><stop offset=".6" stop-color="#5b1020"/><stop offset="1" stop-color="#e9602a"/></linearGradient></defs><path d="M6 78 C2 50 8 22 32 2 C26 24 28 46 34 78 Z" fill="url(#hnD)" stroke="#ff7a3a" stroke-width="1.2" stroke-linejoin="round"/><path d="M12 70 C10 50 14 32 26 16" fill="none" stroke="#ffb27a" stroke-opacity=".5" stroke-width="1"/></svg>';
-const EFX=[["angel", "Angel wings and halo"], ["demon", "Demon wings and horns"], ["archangel", "Archangel wings"], ["fallen", "Fallen angel"], ["hulk", "Hulk smash (green shockwave)"], ["flash", "Lightning speed"], ["web", "Spider webs"], ["atom", "Atomic orbits"], ["fist", "Blood aura"], ["cosmic", "Cosmic gems"], ["target", "Bullseye"], ["stretch", "Elastic genius (stretch)"], ["bleed", "Blood: heartbeat veins"], ["drip", "Blood: crimson rain"], ["thorn", "Blood: thorn halo"], ["ogre", "Horned shadow (ogre)"], ["crush", "Brute: crushing pressure"], ["eyes", "Brute: predator eyes"], ["smash", "Brute: falling fist"], ["roar", "Brute: roar shockwave"], ["lines", "Brute: tension lines"], ["glass", "Brute: glass break"], ["brute", "Brute: random of the six"], ["claws", "Claw marks (Wolverine)"], ["infstr", "∞ Strength: a hand grabs and slams the wheel"], ["infspd", "∞ Speed: the wheel rolls off and returns"], ["infagi", "∞ Agility: leaps over obstacles"], ["infdur", "∞ Durability: nothing can break it"], ["infiq", "∞ IQ: holographic mind"], ["infcom", "∞ Combat: flurry and finishing blow"], ["infsor", "∞ Sorcery: runes ignite"], ["infpow", "∞ Power mastery: energy mandala"]];
+const EFX=[["angel", "Angel wings and halo"], ["demon", "Demon wings and horns"], ["archangel", "Archangel wings"], ["fallen", "Fallen angel"], ["cosmic", "Cosmic gems"], ["target", "Bullseye"], ["infstr", "∞ Strength: a hand grabs and slams the wheel"], ["infspd", "∞ Speed: the wheel rolls off and returns"], ["infagi", "∞ Agility: leaps over obstacles"], ["infdur", "∞ Durability: nothing can break it"], ["infiq", "∞ IQ: holographic mind"], ["infcom", "∞ Combat: flurry and finishing blow"], ["infsor", "∞ Sorcery: runes ignite"], ["infpow", "∞ Power mastery: energy mandala"]];
 const FXKINDS=["archangel", "fallen", "hulk", "flash", "web", "atom", "fist", "cosmic", "target", "stretch", "bleed", "drip", "thorn", "ogre", "crush", "eyes", "smash", "roar", "lines", "glass", "brute", "claws", "infstr", "infspd", "infagi", "infdur", "infiq", "infcom", "infsor", "infpow"];
 const FXC={"hulk": "#3fe05a", "flash": "#ffe53a", "web": "#ff3b3b", "atom": "#4aa8ff", "fist": "#ff2a2a", "cosmic": "#c27bff", "target": "#ff3030", "fallen": "#a07bff", "archangel": "#ffe7a0", "stretch": "#5ab8ff", "bleed": "#d0101e", "drip": "#c4121c", "thorn": "#e0202c", "ogre": "#ff2a2a", "crush": "#ff3a2a", "eyes": "#ff2a2a", "smash": "#ff5a2a", "roar": "#ff7a2a", "lines": "#ffb02a", "glass": "#bfe3ff", "brute": "#ff3a2a", "claws": "#d8e4f0", "infstr": "#ff9a3a", "infspd": "#ffe53a", "infagi": "#3fe0a0", "infdur": "#b8c7da", "infiq": "#5ac8ff", "infcom": "#ff4a3a", "infsor": "#b57bff", "infpow": "#ffd34a"};
 function wingKind(w,e){
@@ -1611,33 +1611,47 @@ FX2F.infstr=function(c){
   const {core,A,KF,ov,P,SVG,FB,R,W,lite}=c,T=4.6;
   const back=ov(false),hand=ov(true),front=ov(true),dustL=ov(true);
   const defs='<defs>'
-   +'<linearGradient id="skV" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7b4529"/><stop offset=".22" stop-color="#c98a62"/><stop offset=".42" stop-color="#e9b78f"/><stop offset=".7" stop-color="#bf7f55"/><stop offset="1" stop-color="#5f311c"/></linearGradient>'
-   +'<linearGradient id="skF" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5c2f1b"/><stop offset=".22" stop-color="#b9774f"/><stop offset=".45" stop-color="#e2ab82"/><stop offset=".75" stop-color="#b8754c"/><stop offset="1" stop-color="#4e2616"/></linearGradient>'
-   +'<linearGradient id="skFade" gradientUnits="userSpaceOnUse" x1="0" y1="100" x2="0" y2="128"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>'
-   +'<mask id="skM" maskUnits="userSpaceOnUse" x="-15" y="-15" width="130" height="150"><rect x="-15" y="-15" width="130" height="150" fill="url(#skFade)"/></mask>'
-   +'<filter id="shB" x="-30%" y="-80%" width="160%" height="260%"><feGaussianBlur stdDeviation="1.5"/></filter></defs>';
-  /* forearm + palm (behind the wheel): tapered, muscular, with tendons and veins, fading into the dark */
-  const arm='<g mask="url(#skM)"><path d="M13 66 C11 48 24 35 50 33 C76 35 89 48 87 66 C87 82 78 92 71 101 C69 107 70 111 72 118 C74 124 77 130 79 140 L21 140 C23 130 26 124 28 118 C30 111 31 107 29 101 C22 92 13 82 13 66Z" fill="url(#skF)" stroke="#2e170b" stroke-opacity=".55" stroke-width="1"/>'
-   +'<path d="M38 104 C37 116 36 126 34 138 M47 106 C47 118 47 128 47 138 M57 106 C58 118 58 128 60 138" fill="none" stroke="#5a2d19" stroke-opacity=".35" stroke-width="1.3"/>'
-   +'<path d="M62 102 C65 110 60 116 63 124 C65 129 64 133 66 138 M36 112 C33 118 37 124 34 131" fill="none" stroke="#6b7c86" stroke-opacity=".45" stroke-width="1.5" stroke-linecap="round"/>'
-   +'<ellipse cx="46" cy="124" rx="9" ry="16" fill="#f3c9a4" opacity=".16"/></g>';
-  const armS=SVG(back,defs+arm);
-  const ol='stroke="#3a1c0e" stroke-opacity=".6" stroke-width=".8" stroke-linejoin="round"';
-  const finger=(a,L,w0,w1,creases)=>{
-    const t=a*Math.PI/180,bx=50+50*Math.cos(t),by=50+50*Math.sin(t);
-    const d='M0 -'+w0+' C'+(L*.4)+' -'+(w0-.2)+' '+(L*.72)+' -'+(w1+.5)+' '+(L-w1)+' -'+w1+' Q'+(L+1.8)+' -'+(w1-.2)+' '+(L+1.9)+' 0 Q'+(L+1.8)+' '+(w1-.2)+' '+(L-w1)+' '+w1+' C'+(L*.72)+' '+(w1+.5)+' '+(L*.4)+' '+(w0-.2)+' 0 '+w0+'Z';
-    let cr='';creases.forEach(p=>{const x=L*p;cr+='<path d="M'+x.toFixed(1)+' -'+(w1-.8)+' q1.3 '+(w1-.8)+' 0 '+((w1-.8)*2)+'" fill="none" stroke="#5a2d19" stroke-opacity=".6" stroke-width=".8" stroke-linecap="round"/><path d="M'+(x+1.1).toFixed(1)+' -'+(w1-1.8)+' q1.1 '+(w1-1.8)+' 0 '+((w1-1.8)*2)+'" fill="none" stroke="#f6d6b8" stroke-opacity=".28" stroke-width=".6" stroke-linecap="round"/>'});
-    return '<g transform="translate('+bx.toFixed(1)+' '+by.toFixed(1)+') rotate('+(a+180)+')"><g class="fgr"><path d="'+d+'" fill="#000" opacity=".42" filter="url(#shB)" transform="translate(1.2 2.4)"/><path d="'+d+'" fill="url(#skV)" '+ol+'/>'+cr
-      +'<ellipse cx="'+(L-3.4)+'" cy="-1" rx="2.8" ry="'+(w1-1.8)+'" fill="#fff0de" opacity=".3"/><path d="M3 -'+(w0-1.4)+' C'+(L*.4)+' -'+(w0-1.8)+' '+(L*.7)+' -'+(w1)+' '+(L-5)+' -'+(w1-1.2)+'" fill="none" stroke="#ffc896" stroke-opacity=".35" stroke-width=".7" stroke-linecap="round"/></g></g>';
-  };
-  /* index at the top, pinky lowest; the thumb presses from the other side */
-  const fg=finger(6,25,6.1,4.5,[.36,.68])+finger(28,29,6.4,4.6,[.35,.67])+finger(50,26,6,4.4,[.36,.68])+finger(72,20,5.2,3.9,[.4,.72])+finger(160,29,7.6,5.8,[.55]);
-  const fS=SVG(hand,defs+fg);
-  const fingers=[...fS.querySelectorAll('.fgr')];fingers.forEach(f=>FB(f,'0% 50%'));
-  /* the open hand rises, then every finger curls over the rim (foreshortening through zero), and lets go after the slam */
-  fingers.forEach((f,i)=>{const t0=.9+i*.06;
-    A(f,[{scale:'-1 1',offset:0},{scale:'.16 1',offset:.55,easing:'ease-in'},{scale:'1.06 1',offset:.85,easing:'ease-out'},{scale:'1 1',offset:1}],{delay:t0*1000,duration:430});
-    A(f,[{scale:'1 1',offset:0},{scale:'-1 1',offset:1}],{delay:2.35*1000,duration:340,fill:'forwards',easing:'ease-in'})});
+   +'<linearGradient id="skX" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6a3820"/><stop offset=".2" stop-color="#b9774f"/><stop offset=".48" stop-color="#eab78e"/><stop offset=".78" stop-color="#b97a52"/><stop offset="1" stop-color="#58301b"/></linearGradient>'
+   +'<linearGradient id="skFade" gradientUnits="userSpaceOnUse" x1="0" y1="124" x2="0" y2="152"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>'
+   +'<mask id="skM" maskUnits="userSpaceOnUse" x="-15" y="90" width="130" height="80"><rect x="-15" y="90" width="130" height="80" fill="url(#skFade)"/></mask>'
+   +'<filter id="shB" x="-40%" y="-20%" width="180%" height="140%"><feGaussianBlur stdDeviation="1.3"/></filter></defs>';
+  /* the back of a right hand seen from the front: knuckles, tendons and a vein, fading into the dark below the stage */
+  const back0='<g mask="url(#skM)"><path d="M13 114 C8 126 20 134 24 140 L21 170 L79 170 L76 140 C85 131 83 118 78 108 L30 106 Z" fill="url(#skX)" stroke="#2e170b" stroke-opacity=".55" stroke-width="1"/>'
+   +'<ellipse cx="17" cy="120" rx="8" ry="11" fill="#f0c8a2" opacity=".16"/>'
+   +[31,44,57,69].map((x,i)=>'<ellipse cx="'+x+'" cy="110.5" rx="'+(i<3?6:5)+'" ry="3.4" fill="#f4d2b0" opacity=".34"/><path d="M'+(x-1)+' 114 C'+(x+(i-1.5)*1.6)+' 126 '+(x+(i-1.5)*3)+' 138 '+(x+(i-1.5)*4)+' 156" fill="none" stroke="#5a2d19" stroke-opacity=".38" stroke-width="1.3" stroke-linecap="round"/>').join('')
+   +'<path d="M62 118 C66 126 60 133 64 142 C66 147 65 152 67 160 M33 124 C30 130 35 136 32 143" fill="none" stroke="#6b7c86" stroke-opacity=".42" stroke-width="1.6" stroke-linecap="round"/></g>';
+  /* every finger is a chain of segments (knuckle joints) that curls over the rim; the thumb comes in from the side */
+  const ol='stroke="#3a1c0e" stroke-opacity=".34" stroke-width=".7" stroke-linejoin="round"';
+  const mkF=(F)=>{let s='<g transform="translate('+F.bx+' '+F.by+')"><g class="fgx">',yb=0;
+    F.L.forEach((L,j)=>{const x=-F.w/2,y=-(yb+L),w=F.w,last=j===F.L.length-1,rx=last?w*.46:2.4;
+      s+='<g class="sgm">'
+       +'<rect x="'+(x+.8)+'" y="'+(y+1.6)+'" width="'+w+'" height="'+(L+.4)+'" rx="'+rx+'" fill="#000" opacity=".4" filter="url(#shB)"/>'
+       +'<rect x="'+x+'" y="'+y+'" width="'+w+'" height="'+(L+1.8)+'" rx="'+rx+'" fill="url(#skX)" '+ol+'/>'
+       +'<rect x="'+(-w*.14)+'" y="'+(y+2)+'" width="'+(w*.2)+'" height="'+(L-3.6)+'" rx="'+(w*.1)+'" fill="#fff0de" opacity=".24"/>'
+       +(j?'<path d="M'+(x+1.2)+' '+(y+L+.4)+' q'+(w/2-1.2)+' 1.6 '+(w-2.4)+' 0" fill="none" stroke="#4a2414" stroke-opacity=".5" stroke-width=".8" stroke-linecap="round"/>':'')
+       +(last?'<rect x="'+(-w*.31)+'" y="'+(y+1.1)+'" width="'+(w*.62)+'" height="'+(Math.min(L*.5,8))+'" rx="'+(w*.2)+'" fill="#f0cdb6" stroke="#9a6446" stroke-opacity=".7" stroke-width=".6"/><ellipse cx="'+(-w*.1)+'" cy="'+(y+3)+'" rx="'+(w*.1)+'" ry="1" fill="#fff" opacity=".5"/>':'')
+       +'</g>';yb+=L});
+    return s+'</g></g>'};
+  const FING=[
+    {bx:31,by:108,w:12,L:[20,14,12],fo:-16,fc:-3},
+    {bx:44,by:108,w:12.5,L:[22,15,13],fo:-6,fc:0},
+    {bx:57,by:108,w:12,L:[20,14,12],fo:5,fc:3},
+    {bx:69,by:109,w:10.5,L:[16,11,10],fo:15,fc:6},
+    {bx:15,by:116,w:14.5,L:[18,15],fo:-42,fc:24,thumb:true}];
+  const hs=SVG(hand,defs+back0+FING.map(mkF).join(''));
+  const SC=[.6,.62,.72],SCT=[.7,.78];
+  FING.forEach((F,i)=>{
+    const el=hs.querySelectorAll('.fgx')[i];el.style.transformOrigin='0px 0px';el.style.rotate=F.fo+'deg';
+    const t0=.9+i*.05,sc=F.thumb?SCT:SC;
+    A(el,[{rotate:F.fo+'deg'},{rotate:F.fc+'deg'}],{delay:t0*1000,duration:440,easing:'ease-in-out'});
+    A(el,[{rotate:F.fc+'deg'},{rotate:F.fo+'deg'}],{delay:2.35*1000,duration:340,fill:'forwards',easing:'ease-in'});
+    let yb=0;
+    [...el.querySelectorAll('.sgm')].forEach((sg,j)=>{
+      let sh=0;for(let k=0;k<j;k++)sh+=F.L[k]*(1-sc[k]);
+      sg.style.transformOrigin='0px '+(-yb)+'px';yb+=F.L[j];
+      A(sg,[{translate:'0px 0px',scale:'1 1'},{translate:'0px '+sh.toFixed(2)+'px',scale:'1 '+sc[j]}],{delay:t0*1000,duration:440,easing:'ease-in-out'});
+      A(sg,[{translate:'0px '+sh.toFixed(2)+'px',scale:'1 '+sc[j]},{translate:'0px 0px',scale:'1 1'}],{delay:2.35*1000,duration:340,fill:'forwards',easing:'ease-in'})});
+  });
   /* the whole grip moves as one: lift, hold, slam, settle */
   const grp=[core,hand,front,back];
   const lift=KF(T,[[0,{translate:'0% 0%',scale:'1'}],[1.35,{translate:'0% 0%',scale:'1'},'cubic-bezier(.3,.6,.3,1)'],[1.8,{translate:'0% -14%',scale:'1.05'}],[2.02,{translate:'0% -15.5%',scale:'1.06'},'cubic-bezier(.7,0,1,.8)'],[2.2,{translate:'0% 15%',scale:'1.1 .9'},'cubic-bezier(.2,.8,.3,1)'],[2.5,{translate:'0% 3%',scale:'1 1'}],[2.9,{translate:'0% 0%',scale:'1'}],[T,{translate:'0% 0%',scale:'1'}]]);
@@ -1645,7 +1659,6 @@ FX2F.infstr=function(c){
   /* the arm and the hand rise from below, and drop away after the slam */
   const rise=KF(T,[[0,{translate:'0% 85%'}],[.9,{translate:'0% 0%'},'cubic-bezier(.2,.8,.3,1)'],[2.3,{translate:'0% 0%'},'ease-in'],[3.0,{translate:'0% 65%'}],[T,{translate:'0% 65%'}]]);
   const vis=KF(T,[[0,{opacity:1}],[2.3,{opacity:1}],[3.0,{opacity:0}],[T,{opacity:0}]]);
-  A(armS,rise,{duration:T*1000});A(armS,vis,{duration:T*1000});
   A(hand,rise,{duration:T*1000,composite:'add'});A(hand,vis,{duration:T*1000});
   /* wheel wobbles after the crash */
   A(core,KF(T,[[0,{rotate:'0deg'}],[1.0,{rotate:'0deg'}],[1.3,{rotate:'-2deg'}],[1.9,{rotate:'2.5deg'}],[2.2,{rotate:'-4deg'}],[2.45,{rotate:'3deg'}],[2.75,{rotate:'-1.2deg'}],[3.1,{rotate:'0deg'}],[T,{rotate:'0deg'}]]),{duration:T*1000,composite:'add'});
@@ -1729,6 +1742,19 @@ FX2F.infagi=function(c){
   kfY.push([4.55,{translate:'0% '+B0+'%',rotate:'1800deg',scale:SC},'cubic-bezier(.3,.7,.3,1)']);
   kfY.push([4.85,{translate:'0% '+(B0-9)+'%',rotate:'2160deg',scale:SC},'cubic-bezier(.6,0,.9,.5)']);kfY.push([5.1,{translate:'0% '+B0+'%',rotate:'2520deg',scale:SC}]);kfY.push([T,{translate:'0% '+B0+'%',rotate:'2520deg',scale:SC}]);
   A(core,KF(T,kfY),{duration:T*1000});
+  /* afterimages: lagging copies of the wheel trail it through every jump */
+  const cvA=core.querySelector('canvas');
+  if(cvA&&!lite)for(let g=1;g<=3;g++){
+    const gh=ov(false);gh.style.pointerEvents='none';
+    const c2=document.createElement('canvas');c2.width=cvA.width;c2.height=cvA.height;try{c2.getContext('2d').drawImage(cvA,0,0)}catch(e){}
+    c2.style.cssText='position:absolute;inset:0;width:100%;height:100%;opacity:'+(.34/g).toFixed(2)+';filter:saturate(1.5) drop-shadow(0 0 8px #3fe0a0)';gh.append(c2);
+    A(gh,KF(T,kfY),{duration:T*1000,delay:g*60,fill:'both'})}
+  /* a soft shadow on the ground: small and dark when the wheel is down, faint and wide when it is high */
+  const shd=P(back,'left:18%;top:93.5%;width:64%;height:5%;border-radius:50%;background:radial-gradient(ellipse,rgba(0,0,0,.7),rgba(0,0,0,0) 70%)');
+  const sk=[[0,{scale:'1 1',opacity:.8}]];
+  jumps.forEach(j=>{const t=j[0];sk.push([t-half-.02,{scale:'1 1',opacity:.8},'ease-out']);sk.push([t,{scale:'.55 .55',opacity:.3},'ease-in']);sk.push([t+half,{scale:'1 1',opacity:.8}])});
+  sk.push([4.55,{scale:'1 1',opacity:.8}]);sk.push([4.85,{scale:'.6 .6',opacity:.3}]);sk.push([5.1,{scale:'1 1',opacity:.8}]);sk.push([T,{scale:'1 1',opacity:.8}]);
+  A(shd,KF(T,sk),{duration:T*1000});
   jumps.forEach(j=>{const t=j[0]+half;
     for(let i=0;i<(lite?2:4);i++)fx2Puff(c,front,R(35,65),95,R(12,18),t+R(0,.08),R(.6,.9),'rgba(200,235,220,.7)',R(-.2,.2),R(-.06,-.01))});
   /* the wheel's "run-in-place" before the first jump, and green speed lines behind it */
@@ -1830,44 +1856,67 @@ FX2F.infiq=function(c){
 };
 /* ---------- Combat: a flurry of punches and kicks, then a finishing blow ---------- */
 FX2F.infcom=function(c){
-  const {core,A,KF,ov,P,SVG,FB,R,W,lite}=c,T=3.8;
-  const back=ov(false),front=ov(true);
-  const star=(x,y,r,col1,col2,t0,rot,dur)=>{
-    const n=10,pts=Array.from({length:n*2},(_,k)=>{const a=k/(n*2)*Math.PI*2,rr=k%2?r*.5:r*(.85+Math.random()*.35);return(Math.cos(a)*rr).toFixed(1)+','+(Math.sin(a)*rr).toFixed(1)}).join(' ');
-    const el=P(front,'left:'+x+'%;top:'+y+'%;width:'+(r*2.6)+'%;height:'+(r*2.6)+'%;margin:'+(-r*1.3)+'% 0 0 '+(-r*1.3)+'%;opacity:0','<svg viewBox="-'+r*1.3+' -'+r*1.3+' '+r*2.6+' '+r*2.6+'" width="100%" height="100%" style="overflow:visible"><polygon points="'+pts+'" fill="'+col1+'" stroke="#2a0606" stroke-width="'+(r*.09).toFixed(1)+'" stroke-linejoin="round"/><polygon points="'+pts+'" fill="'+col2+'" transform="scale(.55)"/></svg>');
-    A(el,[{scale:.2,rotate:(rot-25)+'deg',opacity:1,offset:0},{scale:1.15,rotate:rot+'deg',opacity:1,offset:.3},{scale:1,rotate:rot+'deg',opacity:1,offset:.7},{scale:1.25,rotate:rot+'deg',opacity:0,offset:1}],{delay:t0*1000,duration:(dur||.45)*1000,easing:'ease-out'});
+  const {core,A,KF,ov,P,SVG,FB,R,W,lite}=c,T=4.8;
+  const back=ov(false),halves=ov(false),front=ov(true);
+  const cv=core.querySelector('canvas');
+  const defs='<defs><linearGradient id="bld" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7f93ab"/><stop offset=".45" stop-color="#f6fbff"/><stop offset=".55" stop-color="#cfdbe8"/><stop offset="1" stop-color="#6c7f97"/></linearGradient></defs>';
+  /* a long sword: steel blade with a bright fuller, gold guard, leather grip and pommel; the hilt is the origin and the blade points along +x */
+  const sword='<g class="swr" style="opacity:0"><path d="M2 -2.7 L56 -1.6 L64 0 L56 1.7 L2 2.7Z" fill="url(#bld)" stroke="#dff0ff" stroke-width=".4" stroke-linejoin="round"/><path d="M5 0 L56 0" stroke="#fff" stroke-opacity=".75" stroke-width=".5"/><rect x="-2" y="-7.5" width="4" height="15" rx="1.7" fill="#d2ab4e" stroke="#6a4c14" stroke-width=".5"/><rect x="-14" y="-2" width="12.5" height="4" rx="1.8" fill="#5e3b22" stroke="#2a160a" stroke-width=".5"/><circle cx="-15" cy="0" r="2.9" fill="#d2ab4e" stroke="#6a4c14" stroke-width=".5"/></g>';
+  const mkSword=(glow)=>{const s=SVG(front,defs+sword,glow?'filter:drop-shadow(0 0 6px '+glow+') drop-shadow(0 0 14px '+glow+')':'filter:drop-shadow(0 0 3px #9fdcff)');const g=s.querySelector('.swr');g.style.transformOrigin='0px 0px';return g};
+  const sparks=(x,y,t,n,col)=>{for(let i=0;i<n;i++){const a=R(0,Math.PI*2),d=R(8,24),sp=P(front,'left:'+x+'%;top:'+y+'%;width:2px;height:'+R(6,13)+'px;margin:-5px 0 0 -1px;border-radius:2px;background:linear-gradient(#fff,'+col+');opacity:0;rotate:'+(a*57.3+90)+'deg');
+    A(sp,[{translate:'0 0',opacity:1,offset:0},{translate:(Math.cos(a)*d*W/100)+'px '+(Math.sin(a)*d*W/100+W*.05)+'px',opacity:0,offset:1}],{delay:t*1000,duration:R(300,520),easing:'ease-out'})}};
+  /* one slash: the sword crosses the wheel and leaves a glowing cut that fades */
+  const slash=(t,x1,y1,x2,y2,col,wd,dur)=>{
+    const dir=Math.atan2(y2-y1,x2-x1)*57.3,g=mkSword();g.style.rotate=(dir+72)+'deg';
+    A(g,[{translate:x1+'px '+y1+'px',opacity:1,offset:0},{translate:x2+'px '+y2+'px',opacity:1,offset:.78},{translate:x2+'px '+y2+'px',opacity:0,offset:1}],{delay:t*1000,duration:dur||190,easing:'cubic-bezier(.55,0,.3,1)'});
+    const ln=SVG(front,'<defs><clipPath id="wcl"><circle cx="50" cy="50" r="49"/></clipPath></defs><g clip-path="url(#wcl)"><path d="M'+x1+' '+y1+' L'+x2+' '+y2+'" fill="none" stroke="#fff" stroke-width="'+wd+'" stroke-linecap="round" pathLength="1" stroke-dasharray="1" style="filter:drop-shadow(0 0 3px '+col+') drop-shadow(0 0 8px '+col+')"/></g>');
+    A(ln.querySelector('path'),[{strokeDashoffset:1,opacity:1,offset:0},{strokeDashoffset:0,opacity:1,offset:.2},{strokeDashoffset:0,opacity:.85,offset:.5},{strokeDashoffset:0,opacity:0,offset:1}],{delay:t*1000,duration:760,fill:'both'});
+    for(let k=0;k<3;k++){const f=.3+k*.2;sparks(x1+(x2-x1)*f,y1+(y2-y1)*f,t+.05+k*.03,lite?3:6,'#ffd23a')}
+    /* the wheel is pushed away from the cut */
+    const nx=-(y2-y1),ny=(x2-x1),nl=Math.hypot(nx,ny)||1;
+    A(core,[{translate:'0% 0%',rotate:'0deg',offset:0},{translate:(nx/nl*1.8).toFixed(2)+'% '+(ny/nl*1.8).toFixed(2)+'%',rotate:(nx/nl*1.5).toFixed(2)+'deg',offset:.35},{translate:'0% 0%',rotate:'0deg',offset:1}],{delay:(t+.08)*1000,duration:260,composite:'add'});
   };
-  /* each hit: [time, x, y, comes from (x,y offset in % of box)] */
-  const hits=[[.35,32,36,-50,-30],[.62,68,34,50,-30],[.88,28,64,-55,25],[1.12,72,66,55,30],[1.36,50,24,0,-55],[1.58,44,52,-50,0],[1.78,58,56,50,5]];
-  hits.forEach((h0,i)=>{const t=h0[0],x=h0[1],y=h0[2],ox=h0[3],oy=h0[4];
-    /* a fast streak coming in from the side = the fist or foot */
-    const L=Math.hypot(ox,oy),ang=Math.atan2(oy,ox)*57.3,st=P(front,'left:'+(x+ox)+'%;top:'+y+'%;width:'+L+'%;height:'+(i%2?5:8)+'px;margin-top:-3px;border-radius:5px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.95));transform-origin:0 50%;rotate:'+(ang+180)+'deg;opacity:0');
-    A(st,[{translate:'0 0',scale:'.1 1',opacity:0,offset:0},{scale:'1 1',opacity:1,offset:.5},{scale:'.2 1',opacity:0,offset:1}],{delay:(t-.12)*1000,duration:140,easing:'ease-in'});
-    star(x,y,i<5?9:11,i%2?'#ffd23a':'#ff7a3a','#fff3b0',t,R(-20,20),.42);
-    fx2Ring(c,front,x,y,i%2?'#ffe08a':'#ff8a5a',t,18,3,.5);
-    /* recoil of the wheel away from the blow */
-    A(core,[{translate:'0% 0%',rotate:'0deg',offset:0},{translate:(-Math.sign(ox)*2.2)+'% '+(-Math.sign(oy)*1.8)+'%',rotate:(Math.sign(ox)*2.2)+'deg',offset:.3},{translate:'0% 0%',rotate:'0deg',offset:1}],{delay:t*1000,duration:300,composite:'add',easing:'ease-out'});
-    /* a white slash mark after every second hit */
-    if(i%2===0){const sl=SVG(front,'<path d="M'+(x-14)+' '+(y-10)+' L'+(x+14)+' '+(y+10)+'" stroke="#fff" stroke-width="2.4" stroke-linecap="round" pathLength="1" stroke-dasharray="1" style="filter:drop-shadow(0 0 3px #ff4a3a)"/>');
-      const p=sl.querySelector('path');A(p,[{strokeDashoffset:1,opacity:1,offset:0},{strokeDashoffset:0,opacity:1,offset:.4},{strokeDashoffset:0,opacity:0,offset:1}],{delay:(t+.03)*1000,duration:420})}
-  });
-  /* a rising kick arc */
-  const kick=SVG(front,'<path d="M10 90 Q30 40 70 20" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" pathLength="1" stroke-dasharray="1" style="filter:drop-shadow(0 0 4px #ff4a3a)"/>');
-  A(kick.querySelector('path'),[{strokeDashoffset:1,opacity:1,offset:0},{strokeDashoffset:0,opacity:1,offset:.5},{strokeDashoffset:-1,opacity:0,offset:1}],{delay:1.0*1000,duration:360});
-  /* the finishing blow */
-  const fin=2.2;
-  A(core,KF(T,[[0,{scale:'1'}],[fin-.35,{scale:'1'},'ease-in'],[fin-.05,{scale:'.93'},'cubic-bezier(.2,.9,.3,1)'],[fin+.12,{scale:'1.14'},'ease-out'],[fin+.5,{scale:'1'}],[T,{scale:'1'}]]),{duration:T*1000});
-  star(50,50,24,'#ff3a2a','#fff0a0',fin,0,.8);star(50,50,16,'#ffd23a','#fff',fin+.04,18,.7);
-  fx2Ring(c,front,50,50,'#ffffff',fin,40,6,.9);fx2Ring(c,front,50,50,'#ff6a3a',fin+.08,30,4,1.0);fx2Ring(c,front,50,50,'#ffd23a',fin+.16,24,3,1.1);
-  fx2Shake(c,fin,2.2,.8);
+  slash(.3,-6,20,106,78,'#8fd8ff',2.2);
+  slash(.62,106,22,-6,76,'#8fd8ff',2.2);
+  slash(.94,-6,52,106,46,'#ffffff',2.6);
+  slash(1.22,50,-6,56,106,'#8fd8ff',2.6);
+  /* the charge: a raised sword and a red aura growing around the wheel */
+  const rg=mkSword('#ff3a2a');rg.style.rotate='-112deg';rg.style.scale='1.3';
+  const hiP='93px 74px',hiQ='93px 71px';
+  A(rg,KF(T,[[1.55,{translate:hiP,opacity:0}],[1.85,{translate:hiP,opacity:1},'ease-out'],[2.05,{translate:hiQ,opacity:1}],[2.2,{translate:hiP,opacity:1}],[2.32,{translate:hiQ,opacity:1}],[2.4,{translate:hiP,opacity:1}],[T,{translate:hiP,opacity:1}]]),{duration:T*1000,fill:'none'});
+  /* swing */
+  const fin=2.46;
+  A(rg,[{translate:hiP,rotate:'-112deg',opacity:1,offset:0},{translate:'60px 30px',rotate:'-10deg',opacity:1,offset:.45},{translate:'8px 88px',rotate:'150deg',opacity:1,offset:.85},{translate:'8px 88px',rotate:'150deg',opacity:0,offset:1}],{delay:(fin-.18)*1000,duration:230,easing:'cubic-bezier(.6,0,.2,1)'});
+  const au=P(back,'inset:-8%;border-radius:50%;background:radial-gradient(circle,rgba(255,60,40,0) 56%,rgba(255,60,40,.55) 70%,rgba(255,60,40,0) 84%);opacity:0');
+  A(au,[{opacity:0,scale:.9,offset:0},{opacity:1,scale:1.0,offset:.35},{opacity:.6,scale:.97,offset:1}],{delay:1.7*1000,duration:1500,easing:'ease-out'});
+  A(core,KF(T,[[0,{scale:'1'}],[1.6,{scale:'1'},'ease-in'],[fin-.1,{scale:'.93'},'ease-in'],[fin+.1,{scale:'1.08'},'ease-out'],[fin+.5,{scale:'1'}],[T,{scale:'1'}]]),{duration:T*1000,composite:'add'});
+  /* the finishing cut: the wheel is really split in two along the line, the halves slide apart, then slam back together */
+  const ax=75.9,bx=24.1,sep=fin+.12,join=fin+1.35;
+  if(cv){
+    const mk=(clip,tx,ty,rot)=>{const c2=document.createElement('canvas');c2.width=cv.width;c2.height=cv.height;try{c2.getContext('2d').drawImage(cv,0,0)}catch(e){}
+      c2.style.cssText='position:absolute;inset:0;width:100%;height:100%;opacity:0;clip-path:polygon('+clip+')';halves.append(c2);
+      A(c2,KF(T,[[0,{opacity:0,translate:'0% 0%',rotate:'0deg'}],[sep-.001,{opacity:0,translate:'0% 0%',rotate:'0deg'}],[sep,{opacity:1,translate:'0% 0%',rotate:'0deg'},'cubic-bezier(.1,.9,.3,1)'],[sep+.28,{opacity:1,translate:tx+'% '+ty+'%',rotate:rot+'deg'}],[join-.25,{opacity:1,translate:(tx*1.15)+'% '+(ty*1.15)+'%',rotate:(rot*1.1)+'deg'},'cubic-bezier(.6,0,1,.6)'],[join,{opacity:1,translate:'0% 0%',rotate:'0deg'}],[join+.001,{opacity:0,translate:'0% 0%',rotate:'0deg'}],[T,{opacity:0,translate:'0% 0%',rotate:'0deg'}]]),{duration:T*1000})};
+    mk('0 0,'+ax+'% 0,'+bx+'% 100%,0 100%',-5.5,2.8,-3.5);
+    mk(ax+'% 0,100% 0,100% 100%,'+bx+'% 100%',5.5,-2.8,3.5);
+    A(cv,KF(T,[[0,{opacity:1}],[sep-.001,{opacity:1}],[sep,{opacity:0}],[join,{opacity:0}],[join+.001,{opacity:1}],[T,{opacity:1}]]),{duration:T*1000});
+  }
+  /* glowing edge of the cut while the halves are apart */
+  const edge=SVG(front,'<defs><clipPath id="wcl2"><circle cx="50" cy="50" r="49"/></clipPath></defs><g clip-path="url(#wcl2)"><path d="M'+ax+' -2 L'+bx+' 102" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" pathLength="1" stroke-dasharray="1" style="filter:drop-shadow(0 0 4px #ff4a3a) drop-shadow(0 0 12px #ff4a3a)"/></g>');
+  A(edge.querySelector('path'),KF(T,[[0,{strokeDashoffset:1,opacity:0}],[fin-.04,{strokeDashoffset:1,opacity:1}],[fin+.1,{strokeDashoffset:0,opacity:1}],[join-.2,{strokeDashoffset:0,opacity:.9}],[join+.2,{strokeDashoffset:0,opacity:0}],[T,{strokeDashoffset:0,opacity:0}]]),{duration:T*1000});
+  for(let k=0;k<6;k++)sparks(ax-(ax-bx)*(.1+k*.16),10+k*16,fin+.05+k*.02,lite?4:8,'#ff6a3a');
   const flash=P(front,'inset:-12%;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.95),rgba(255,120,60,.45) 45%,transparent 72%);opacity:0');
-  A(flash,[{opacity:0,offset:0},{opacity:1,offset:.15},{opacity:0,offset:1}],{delay:fin*1000,duration:520});
-  /* speed lines radiate from the center during the final blow */
-  for(let i=0;i<(lite?12:24);i++){const a=i/(lite?12:24)*360+R(-5,5),ln=P(front,'left:50%;top:50%;width:2px;height:'+R(14,26)+'%;margin-top:0;background:linear-gradient(#fff,rgba(255,90,60,0));transform-origin:50% 0;opacity:0;rotate:'+a+'deg');
-    A(ln,[{translate:'0 20%',scale:'1 .2',opacity:0,offset:0},{translate:'0 140%',scale:'1 1',opacity:1,offset:.35},{translate:'0 300%',scale:'1 .4',opacity:0,offset:1}],{delay:(fin+R(0,.1))*1000,duration:520,easing:'ease-out'})}
-  /* lasting aura: a hot red glow breathing around the wheel */
-  const au=P(back,'inset:-8%;border-radius:50%;background:radial-gradient(circle,rgba(255,60,40,0) 56%,rgba(255,60,40,.5) 70%,rgba(255,60,40,0) 84%);opacity:0');
-  A(au,[{opacity:0,scale:.95,offset:0},{opacity:1,scale:1.02,offset:.5},{opacity:.55,scale:.98,offset:1}],{delay:(fin+.3)*1000,duration:1500,iterations:Infinity,direction:'alternate',easing:'ease-in-out'});
+  A(flash,[{opacity:0,offset:0},{opacity:1,offset:.15},{opacity:0,offset:1}],{delay:fin*1000,duration:480});
+  fx2Ring(c,front,50,50,'#ffffff',fin+.05,40,5,.9);fx2Ring(c,front,50,50,'#ff6a3a',fin+.13,30,4,1.0);
+  fx2Shake(c,fin+.04,2.2,.7);
+  /* the halves slam back together */
+  fx2Ring(c,front,50,50,'#ffd23a',join,36,5,.9);fx2Ring(c,front,50,50,'#ffffff',join+.06,26,3,.8);
+  sparks(50,50,join,lite?10:18,'#ffd23a');fx2Shake(c,join,2.6,.7);
+  const f2=P(front,'inset:-10%;border-radius:50%;background:radial-gradient(circle,rgba(255,240,200,.9),rgba(255,160,60,.3) 45%,transparent 70%);opacity:0');
+  A(f2,[{opacity:0,offset:0},{opacity:.9,offset:.12},{opacity:0,offset:1}],{delay:join*1000,duration:480});
+  A(core,KF(T,[[0,{scale:'1'}],[join-.02,{scale:'1'}],[join+.05,{scale:'1.1'},'ease-out'],[join+.35,{scale:'1'}],[T,{scale:'1'}]]),{duration:T*1000,composite:'add'});
+  /* a faint hot glow lingers */
+  const au2=P(back,'inset:-8%;border-radius:50%;background:radial-gradient(circle,rgba(255,60,40,0) 56%,rgba(255,60,40,.5) 70%,rgba(255,60,40,0) 84%);opacity:0');
+  A(au2,[{opacity:0,offset:0},{opacity:.9,offset:.5},{opacity:.5,offset:1}],{delay:join*1000,duration:1400,iterations:Infinity,direction:'alternate',easing:'ease-in-out'});
 };
 /* ---------- Sorcery: runes are written around the wheel and ignite in turn ---------- */
 FX2F.infsor=function(c){
@@ -2228,7 +2277,7 @@ function gauntletSvg(){
    '<path d="M28 126 L72 126 L77 99 L23 99 Z"/><path d="M33 120 H67 M31 112 H69 M29 105 H71" fill="none" stroke-opacity=".7"/>'+
    '<path d="M23 99 L77 99 L82 63 Q50 52 18 63 Z"/>'+
    '<rect x="19" y="26" width="13" height="40" rx="6.5"/><rect x="34" y="14" width="13" height="50" rx="6.5"/><rect x="49" y="12" width="13" height="52" rx="6.5"/><rect x="64" y="22" width="13" height="42" rx="6.5"/>'+
-   '<path d="M80 70 Q94 62 96 46 Q98 38 90 40 Q86 54 74 60 Z"/>'+
+   '<rect x="-7" y="-25" width="14" height="31" rx="7" transform="translate(79 89) rotate(40)"/>'+
    '</g><circle cx="50" cy="78" r="24" fill="none" stroke="#f0cf86" stroke-opacity=".5" stroke-width=".8"/>'+sock+'<circle cx="50" cy="78" r="3.6" fill="#f0cf86" fill-opacity=".7"/></svg>';
 }
 function gemSvg(c){return '<svg viewBox="0 0 40 40" width="100%" height="100%"><polygon points="20,2 36,14 20,38 4,14" fill="'+c[1]+'"/><polygon points="20,2 36,14 20,16 4,14" fill="'+c[0]+'"/><polygon points="20,16 36,14 20,38" fill="'+c[1]+'" opacity=".55"/><polygon points="20,2 28,14 20,16 12,14" fill="#fff" opacity=".4"/></svg>'}
